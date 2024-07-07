@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 const blurLayers = [
   { blur: 0, gradient: "0%, rgba(0, 0, 0, 1) 20%" },
@@ -16,7 +15,7 @@ const blurLayers = [
 
 const BlurLayers = () => {
   return (
-    <div className="blur-container z-50">
+    <div className="blur-container z-50 ">
       {blurLayers.map((layer, index) => (
         <div
           key={index}

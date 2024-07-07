@@ -31,11 +31,11 @@ export default function ImagePreviewer({ imageFile, children }: ImagePreviewerPr
   }, [imageFile]);
 
   return imageFile ? (
-    <div className="flex flex-col items-start space-y-4 rounded-md border p-4 w-full">
+    <div className="flex flex-col items-start space-y-4  w-full">
       <Label>{`${(imageFile.size / 1024 / 1024).toFixed(2)} MB`}</Label>
       <Dialog>
         <DialogTrigger>
-          <img src={imageURL} alt="Image preview" />
+          <img src={imageURL} alt="Image preview" className="rounded-md" />
         </DialogTrigger>
         <DialogContent className="w-fit h-fit">
           <DialogHeader>
