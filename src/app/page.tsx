@@ -17,6 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { LoadingSpinner } from "@/components/spinner";
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -31,7 +32,9 @@ export default function Home() {
   const handleCompressFile = async () => {
     if (selectedImage) {
       try {
+        setIsCompressing(true);
         const compressedImageFile = await compressFile(selectedImage);
+        setIsCompressing(false);
         setCompressedImage(compressedImageFile);
       } catch (error) {
         console.log({ error });
@@ -84,6 +87,7 @@ export default function Home() {
                     onClick={handleCompressFile}
                   >
                     {isCompressing ? "Compressing..." : " Compress Image"}
+                    {isCompressing && <LoadingSpinner className="ml-2" />}
                   </Button>
                 </CardFooter>
               </Card>
