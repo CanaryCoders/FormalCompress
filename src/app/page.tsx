@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="animate-in fade-in duration-300 min-h-[100svh] mx-auto max-w-screen-md pt-20 pb-16 px-safe sm:pb-0">
+      <div className="animate-in fade-in duration-300 min-h-[100svh] mx-auto max-w-screen-md pt-20 pb-16 px-safe ">
         <div className="md:p-8 p-4">
           <section className="flex flex-col space-y-8">
             <div className="flex flex-col items-center justify-center">
