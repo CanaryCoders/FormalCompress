@@ -49,7 +49,7 @@ export default function Home() {
         <div className="md:p-8 p-4">
           <section className="flex flex-col space-y-8">
             <div className="flex flex-col items-center justify-center">
-              <Card className="md:w-[400px] w-[100%]">
+              <Card className="md:w-[400px] w-[100%] bg-muted/40">
                 <CardHeader>
                   <CardTitle>Compress Image</CardTitle>
                   <CardDescription>
@@ -61,7 +61,12 @@ export default function Home() {
                     <div className="grid w-full items-center gap-4">
                       <div className="flex flex-col space-y-1.5">
                         <Label htmlFor="picture">Image</Label>
-                        <Input id="picture" type="file" onChange={handleOnChange} />
+                        <Input
+                          id="picture"
+                          type="file"
+                          className="bg-muted hover:bg-foreground/10 transition-colors"
+                          onChange={handleOnChange}
+                        />
                       </div>
                     </div>
                   </form>
@@ -69,6 +74,7 @@ export default function Home() {
                 <CardFooter className="flex justify-between">
                   <Button
                     variant="outline"
+                    className="bg-muted hover:bg-foreground/10"
                     onClick={() => {
                       setSelectedImage(null);
                       // clear input with the id picture
@@ -94,7 +100,7 @@ export default function Home() {
             </div>
             {compressedImage && (
               <div className="flex flex-col items-center justify-center">
-                <Card className="md:w-[400px] w-[100%]">
+                <Card className="md:w-[400px] w-[100%] bg-muted/40">
                   <CardHeader>
                     <CardTitle>Download Image</CardTitle>
                     <CardDescription>Download your compressed image.</CardDescription>

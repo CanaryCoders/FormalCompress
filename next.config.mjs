@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/compress",
+  basePath: "",
 };
 
 export default nextConfig;
